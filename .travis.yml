@@ -14,10 +14,6 @@ before_install:
   - git clone git://git.fedorahosted.org/git/mock.git mock
   - cd mock && ./autogen.sh && ./configure && make && sudo make install && cd ..
 script: 
-  - env mount.nfs -V
-  - which env
-  - env rpmbuild
-  - which mock
   - sudo ./run-tests.sh
 env:
   global:
