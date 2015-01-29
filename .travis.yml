@@ -17,4 +17,18 @@ script:
   - ./configure
   - make
   - sudo ./run-tests.sh
+env:
+  global:
+   # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
+   #   via the "travis encrypt" command using the project repo's public key
+   - secure: "loaSEs7+//x5ssx1zM7XEbxnR/i+VendNLaWlUH3u3uD1oLm+LPhv1seS8zZ3a6AlxINEqXpH0NPjviig4aUOmJWvT9MHaRIR5Ym2xIfpSMKnCul6bEX2O6nCu4uiORZUb+CDnPjqQ8rAUugvvTqPj+CcMXljtQlIdlZQ6Luuio="
 
+addons:
+  coverity_scan:
+    project:
+      name: "nandajavarma/glusterfs"
+      description: "GlusterFS clone"
+    notification_email: nandaja.varma@gmail.com
+    build_command_prepend: "./autogen,sh && ./configure"
+    build_command:   "make"
+    branch_pattern: coverity_scan
