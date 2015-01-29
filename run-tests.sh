@@ -35,12 +35,6 @@ function check_dependencies()
     fi
 
     # Check for nfs-utils (Linux-only: built-in NetBSD with different name)
-    if [ "x`uname -s`" = "xLinux" ] ; then
-      $(which mount.nfs) > /dev/null 2>&1
-      if [ $? -ne 0 ]; then
-          MISSING="$MISSING nfs-utils"
-      fi
-    fi
 
     # Check for the Perl Test Harness
     env prove --version > /dev/null 2>&1
