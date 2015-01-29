@@ -36,7 +36,7 @@ function check_dependencies()
 
     # Check for nfs-utils (Linux-only: built-in NetBSD with different name)
     if [ "x`uname -s`" = "xLinux" ] ; then
-      env mount.nfs -V > /dev/null 2>&1
+      mount.nfs --version > /dev/null 2>&1
       if [ $? -ne 0 ]; then
           MISSING="$MISSING nfs-utils"
       fi
