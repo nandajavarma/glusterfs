@@ -9,12 +9,14 @@ before_script:
   - sudo add-apt-repository -y ppa:ubuntugis/ubuntugis-unstable
   - sudo apt-get update -y
   - sudo apt-get install -y libfuse-dev libxml2-dev dbench 
-    xfsprogs attr rpm yajl-tools nfs-utils
+    xfsprogs attr rpm yajl-tools nfs-kernel-server nfs-common
 before_install:
   - wget https://github.com/lpabon/cmockery2/archive/v1.3.8.tar.gz
   - tar -xvf v1.3.8.tar.gz
   - cd cmockery2-1.3.8 && ./autogen.sh && ./configure && make && sudo make install && cd ..
 script: 
+  - which mount.nfs
+  - which mock
   - sudo ./run-tests.sh
 env:
   global:
