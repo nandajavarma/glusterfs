@@ -23,7 +23,7 @@ function check_dependencies()
     # basic/rpm.t uses mock, which assumes Linux as the OS
     if [ "x`uname -s`" = "xLinux" ] ; then
         # Check for mock
-        if [ ! -e /usr/bin/mock ]; then
+        if [ ! -e $(which mock) ]; then
             MISSING="$MISSING mock"
         fi
 
