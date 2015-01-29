@@ -13,9 +13,6 @@ before_install:
   - tar -xvf v1.3.8.tar.gz
   - cd cmockery2-1.3.8 && ./autogen.sh && ./configure && make && sudo make install && cd ..
 script: 
-  - ./autogen.sh 
-  - ./configure
-  - make
   - sudo ./run-tests.sh
 env:
   global:
