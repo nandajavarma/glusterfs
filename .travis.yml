@@ -13,9 +13,10 @@ before_install:
   - cd cmockery2-1.3.8 && ./autogen.sh && ./configure && make && sudo make install && cd ..
   - git clone git://git.fedorahosted.org/git/mock.git mock
   - cd mock && ./autogen.sh && ./configure && make && sudo make install && cd ..
-script: 
-  - ./autogen.sh && ./configure && make && sudo make install
-  - sudo ./run-tests.sh
+#Since gerrit runs the regressions tests, why bother travis!
+#script:
+#  - ./autogen.sh && ./configure && make && sudo make install
+#  - sudo ./run-tests.sh
 env:
   global:
    # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
@@ -30,4 +31,4 @@ addons:
     notification_email: nandaja.varma@gmail.com
     build_command_prepend: "./autogen.sh && ./configure"
     build_command:   "make"
-    branch_pattern: coverity_scan
+    branch_pattern: *
