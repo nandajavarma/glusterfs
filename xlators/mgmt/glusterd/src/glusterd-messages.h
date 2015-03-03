@@ -45,7 +45,7 @@
  */
 
 #define GLUSTERD_COMP_BASE      GLFS_MSGID_GLUSTERD
-#define GLFS_NUM_MESSAGES       20
+#define GLFS_NUM_MESSAGES       93
 #define GLFS_MSGID_END          (GLUSTERD_COMP_BASE + GLFS_NUM_MESSAGES + 1)
 /* Messaged with message IDs */
 #define glfs_msg_start_x GLFS_COMP_BASE, "Invalid: Start of messages"
@@ -214,6 +214,585 @@
  * was issued
  */
 #define GD_MSG_CLUSTER_UNLOCK_FAILED (GLUSTERD_COMP_BASE + 20)
+
+/*!
+ * @messageid 106021
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_NO_MEMORY    (GLUSTERD_COMP_BASE + 21)
+
+/*!
+ * @messageid 106022
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_UNSUPPORTED_VERSION    (GLUSTERD_COMP_BASE + 22)
+
+/*!
+ * @messageid 106023
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_COMMAND_NOT_FOUND    (GLUSTERD_COMP_BASE + 23)
+
+/*!
+ * @messageid 106024
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_SNAPSHOT_OP_FAILED    (GLUSTERD_COMP_BASE + 24)
+
+/*!
+ * @messageid 106025
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_INVALID_ENTRY    (GLUSTERD_COMP_BASE + 25)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_VOL_NOT_FOUND    (GLUSTERD_COMP_BASE + 27)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_REG_COMPILE_FAILED    (GLUSTERD_COMP_BASE + 28)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_FILE_OP_FAILED    (GLUSTERD_COMP_BASE + 29)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_SNAP_CREATION_FAIL (GLUSTERD_COMP_BASE + 30)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_VOL_OP_FAILED    (GLUSTERD_COMP_BASE + 31)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_CREATE_DIR_FAILED (GLUSTERD_COMP_BASE + 32)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_DIR_OP_FAILED    (GLUSTERD_COMP_BASE + 33)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_VOL_STOP_FAILED    (GLUSTERD_COMP_BASE + 34)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_NO_CLI_RESP    (GLUSTERD_COMP_BASE + 35)
+
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_LOCK_INIT_FAILED    (GLUSTERD_COMP_BASE + 36)
+
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_SNAP_LIST_GET_FAIL   (GLUSTERD_COMP_BASE + 37)
+
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_UNOUNT_FAILED    (GLUSTERD_COMP_BASE + 38)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_LOCK_DESTROY_FAILED    (GLUSTERD_COMP_BASE + 39)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_SNAP_CLEANUP_FAIL (GLUSTERD_COMP_BASE + 40)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_SNAP_ACTIVATE_FAIL (GLUSTERD_COMP_BASE + 41)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_SNAP_DEACTIVATE_FAIL (GLUSTERD_COMP_BASE + 42)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_SNAP_RESTORE_FAIL (GLUSTERD_COMP_BASE + 43)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_SNAP_REMOVE_FAIL (GLUSTERD_COMP_BASE + 44)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_SNAP_CONFIG_FAIL (GLUSTERD_COMP_BASE + 45)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_SNAP_STATUS_FAIL (GLUSTERD_COMP_BASE + 46)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_SNAP_INIT_FAIL (GLUSTERD_COMP_BASE + 47)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_VOLINFO_SET_FAIL (GLUSTERD_COMP_BASE + 48)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_VOLINFO_GET_FAIL (GLUSTERD_COMP_BASE + 49)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_BRICK_CREATION_FAIL (GLUSTERD_COMP_BASE + 50)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_BRICK_GET_INFO_FAIL (GLUSTERD_COMP_BASE + 51)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_BRICK_NEW_INFO_FAIL (GLUSTERD_COMP_BASE + 52)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_LVS_FAIL (GLUSTERD_COMP_BASE + 53)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_SETXATTR_FAIL (GLUSTERD_COMP_BASE + 54)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_UMOUNTING_SNAP_BRICK (GLUSTERD_COMP_BASE + 55)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_OP_UNSUPPORTED (GLUSTERD_COMP_BASE + 56)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_SNAP_NOT_FOUND (GLUSTERD_COMP_BASE + 57)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_FS_LABEL_UPDATE_FAIL (GLUSTERD_COMP_BASE + 58)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_LVM_MOUNT_FAILED (GLUSTERD_COMP_BASE + 59)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_DICT_SET_FAILED (GLUSTERD_COMP_BASE + 60)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_CANONICALIZE_FAIL (GLUSTERD_COMP_BASE + 61)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_DICT_GET_FAILED (GLUSTERD_COMP_BASE + 62)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_SNAP_INFO_FAIL   (GLUSTERD_COMP_BASE + 63)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_SNAP_VOL_CONFIG_FAIL     (GLUSTERD_COMP_BASE + 64)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_SNAP_OBJECT_STORE_FAIL   (GLUSTERD_COMP_BASE + 65)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_DICT_UNSERIALIZE_FAIL    (GLUSTERD_COMP_BASE + 66)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_SNAP_RESTORE_REVERT_FAIL        (GLUSTERD_COMP_BASE + 67)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_SNAP_LIST_SET_FAIL       (GLUSTERD_COMP_BASE + 68)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_VOLFILE_CREATE_FAIL      (GLUSTERD_COMP_BASE + 69)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_VOLINFO_REMOVE_FAIL      (GLUSTERD_COMP_BASE + 70)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_VOL_DELETE_FAIL          (GLUSTERD_COMP_BASE + 71)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_SNAPSHOT_PENDING         (GLUSTERD_COMP_BASE + 72)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_BRICK_PATH_UNMOUNTED         (GLUSTERD_COMP_BASE + 73)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_BRICK_ADD_FAIL           (GLUSTERD_COMP_BASE + 74)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_BRICK_SET_INFO_FAIL      (GLUSTERD_COMP_BASE + 75)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_LVCREATE_FAIL            (GLUSTERD_COMP_BASE + 76)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_VG_GET_FAIL      (GLUSTERD_COMP_BASE + 77)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_TPOOL_GET_FAIL          (GLUSTERD_COMP_BASE + 78)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_LVM_REMOVE_FAILED        (GLUSTERD_COMP_BASE + 79)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_MISSEDSNAP_INFO_SET_FAIL         (GLUSTERD_COMP_BASE + 80)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_BRK_MOUNTOPTS_FAIL      (GLUSTERD_COMP_BASE + 81)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_MISSED_SNAP_LIST_STORE_FAIL        (GLUSTERD_COMP_BASE + 82)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_INVALID_MISSED_SNAP_ENTRY        (GLUSTERD_COMP_BASE + 83)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_MISSED_SNAP_GET_FAIL         (GLUSTERD_COMP_BASE + 84)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_MISSED_SNAP_CREATE_FAIL          (GLUSTERD_COMP_BASE + 85)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_DUP_ENTRY         (GLUSTERD_COMP_BASE + 86)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_MISSED_SNAP_STATUS_DONE          (GLUSTERD_COMP_BASE + 87)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_NO_EXEC_PERMS            (GLUSTERD_COMP_BASE + 88)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_GLOBAL_OP_VERSION_SET_FAIL       (GLUSTERD_COMP_BASE + 89)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_HARD_LIMIT_SET_FAIL      (GLUSTERD_COMP_BASE + 90)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_SNAPSHOT_OP_SUCCESS      (GLUSTERD_COMP_BASE + 91)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_STORE_FAIL       (GLUSTERD_COMP_BASE + 92)
+
+/*!
+ * @messageid
+ * @diagnosis
+ * @recommendedaction
+ *
+ */
+#define GD_MSG_GLOBAL_OP_VERSION_GET_FAIL       (GLUSTERD_COMP_BASE + 93)
 
 /*------------*/
 #define glfs_msg_end_x GLFS_MSGID_END, "Invalid: End of messages"
