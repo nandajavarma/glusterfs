@@ -121,6 +121,27 @@ check_patches_for_coding_style()
     fi
 }
 
+remove_patch_status()
+{
+    git filter-branch -f --msg-filter "sed 's/^Last patch fixing.*$//'" HEAD~1..HEAD;
+}
+
+promt_for_the_patch_status()
+{
+    echo -n "Is this the last patch under this BUG ID: $1 [no/yes]: "
+    read yesno
+    remove_patch_status;
+    if [ "${yesno}" == "no" ] ; then
+        return;
+    fi
+
+    commit_msg=$(git log --format=%B -n 1 HEAD)
+    re='(.*)(^Change-Id.*)'
+    if [[ $commit_msg =~ $re ]] ; then
+        GIT_EDITOR=true git commit --amend -m "${BASH_REMATCH[1]}" -m "Last patch fixing the bug $1" -m "${BASH_REMATCH[2]}";
+    fi
+}
+
 
 main()
 {
@@ -144,6 +165,8 @@ main()
     else
         drier=
     fi
+
+    promt_for_the_patch_status "$bug";
 
     if [ -z "$bug" ]; then
         $drier git push origin HEAD:refs/for/$branch/rfc;
